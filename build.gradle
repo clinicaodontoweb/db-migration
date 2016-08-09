@@ -1,0 +1,40 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath 'org.flywaydb:flyway-gradle-plugin:4.0.3'
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.flywaydb.flyway'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+	compile 'org.flywaydb:flyway-core:4.0.3'
+	compile 'postgresql:postgresql:9.1-901-1.jdbc4'
+	
+}
+
+jar {
+	baseName = 'db-migration'
+}
+
+flyway {
+    user = 'postgres'
+    password = 'root'
+    url = 'jdbc:postgresql://localhost:5432/odontoweb'
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.9'
+}
