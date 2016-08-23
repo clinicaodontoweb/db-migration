@@ -1,10 +1,16 @@
---TIPOS USUARIOS
-INSERT INTO TBL_TIPO_USUARIO VALUES(1, 'Comum');
-INSERT INTO TBL_TIPO_USUARIO VALUES(2, 'Admin');
-INSERT INTO TBL_TIPO_USUARIO VALUES(3, 'Secretaria');
-INSERT INTO TBL_TIPO_USUARIO VALUES(4, 'Profissional');
+--ROLES
+INSERT INTO TBL_ROLE VALUES(1, 'Comum');
+INSERT INTO TBL_ROLE VALUES(2, 'Admin');
+INSERT INTO TBL_ROLE VALUES(3, 'Secretaria');
+INSERT INTO TBL_ROLE VALUES(4, 'Profissional');
 
 --USUARIOS
-INSERT INTO TBL_USUARIO VALUES(default, 'Administrador', 'andre', '518509974', 'admin@gmail.com', 'admin', 'S', 2);
-INSERT INTO TBL_USUARIO VALUES(default, 'Andre Nunes', 'andre', '518509974', 'andre@gmail.com', '123456', 'N', 1);
-INSERT INTO TBL_USUARIO VALUES(default, 'Fernando', 'fernando', '518509974', 'fernando@gmail.com', '123456', 'N', 1);
+INSERT INTO TBL_USUARIO VALUES(1, 'Administrador', 'andre', '518509974', 'admin@gmail.com', 'admin', 'S');
+INSERT INTO TBL_USUARIO VALUES(2, 'Andre Nunes', 'andre', '518509974', 'andre@gmail.com', '123456', 'N');
+INSERT INTO TBL_USUARIO VALUES(3, 'Fernando', 'fernando', '518509974', 'fernando@gmail.com', '123456', 'N');
+
+--USUARIO ROLES
+INSERT INTO TBL_USUARIO_ROLE VALUES(1, 2);
+INSERT INTO TBL_USUARIO_ROLE VALUES(1, 4);
+INSERT INTO TBL_USUARIO_ROLE VALUES(2, 1);
+INSERT INTO TBL_USUARIO_ROLE VALUES(2, 3);

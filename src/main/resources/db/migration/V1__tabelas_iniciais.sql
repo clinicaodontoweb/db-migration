@@ -1,6 +1,6 @@
-CREATE TABLE TBL_TIPO_USUARIO(
+CREATE TABLE TBL_ROLE(
 	ID			serial PRIMARY KEY,
-    STR_TIPO	varchar(40) NOT NULL
+    STR_ROLE	varchar(40) NOT NULL
 );
 
 CREATE TABLE TBL_USUARIO(
@@ -10,6 +10,10 @@ CREATE TABLE TBL_USUARIO(
     NUM_TELEFONE  	varchar(12) NULL,
     STR_EMAIL       varchar(40) NOT NULL,
     STR_SENHA  		varchar(40) NOT NULL,
-    BOO_ADMIN  		char(1) NOT NULL DEFAULT 'N',
-    FK_TIPO_USUARIO integer references TBL_TIPO_USUARIO (ID)
+    BOO_ADMIN  		char(1) NOT NULL DEFAULT 'N'
+);
+
+CREATE TABLE TBL_USUARIO_ROLE(
+    FK_USUARIO integer references TBL_USUARIO (ID),
+    FK_ROLE integer references TBL_ROLE (ID)
 );
