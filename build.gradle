@@ -35,7 +35,7 @@ jar {
 
 flyway {
     user = 'postgres'
-    password = 'root'
+    password = 'postgres'
     url = 'jdbc:postgresql://localhost:5432/odontoweb'
 }
 
