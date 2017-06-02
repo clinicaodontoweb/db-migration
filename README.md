@@ -1,6 +1,6 @@
 # DB-MIGRATION
 
-Projeto para controlar as versões do bando de dados usando o plugin [flyway]('https://flywaydb.org/documentation/gradle/') para o gradle
+Projeto para controlar as versÃµes do bando de dados usando o plugin [flyway]('https://flywaydb.org/documentation/gradle/') para o gradle
 
 ### Migrando o bando de dados
 
@@ -10,12 +10,14 @@ Projeto para controlar as versões do bando de dados usando o plugin [flyway]('ht
 
 `gradle flywayClean`
 
-### Exibe informações sobre as migrações
+### Exibe informaÃ§Ãµes sobre as migraÃ§Ãµes
 
 `gradle flywayInfo`
 
-### Corrige erros nas migrações
+### Corrige erros nas migraÃ§Ãµes
 
 `gradle flywayRepair`
 
+### Override parametros do flyway
 
+`gradle -Dflyway.schemas=teste -Dflyway.locations=classpath:db/migration`
