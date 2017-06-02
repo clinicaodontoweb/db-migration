@@ -47,7 +47,7 @@ task flywayMigrateTenant1(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
     extension = new org.flywaydb.gradle.FlywayExtension()
     extension.driver = "org.postgresql.Driver"
     extension.schemas = ['teste']
-    extension.locations = ['/src/main/resources/db/migration/']
+    extension.locations = ['classpath:db/migration']
     extension.user = 'yjnqoust'
     extension.password = 'bcMRMNxrGAyN3TDwu8Z5FT_6QKgTA04T'
     extension.url = 'jdbc:postgresql://stampy.db.elephantsql.com:5432/yjnqoust?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory'
