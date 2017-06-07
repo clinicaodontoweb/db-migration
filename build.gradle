@@ -33,12 +33,6 @@ jar {
 	baseName = 'db-migration'
 }
 
-flyway {
-    user = 'postgres'
-    password = 'postgres'
-    url = 'jdbc:postgresql://localhost:5432/odontoweb'
-}
-
 task wrapper(type: Wrapper) {
 	gradleVersion = '2.9'
 }
