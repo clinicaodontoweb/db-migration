@@ -3,7 +3,7 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath 'org.flywaydb:flyway-gradle-plugin:4.0.3'
+		classpath 'org.flywaydb:flyway-gradle-plugin:6.3.2'
 	}
 }
 
@@ -24,15 +24,11 @@ repositories {
 }
 
 dependencies {
-	compile 'org.flywaydb:flyway-core:4.0.3'
+	compile 'org.flywaydb:flyway-core:6.3.2'
 	compile 'postgresql:postgresql:9.1-901-1.jdbc4'
 	
 }
 
 jar {
 	baseName = 'db-migration'
-}
-
-task wrapper(type: Wrapper) {
-	gradleVersion = '2.9'
 }
